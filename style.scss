@@ -1,22 +1,63 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: 'Grenze', serif;
 }
 
-$size-1: 36px;
+$size-1: 200px;
+$size-2: 48px;
+$size-3: 36px;
+$size-4: 28px;
+
+$color-yellow:#FFB100;
 
 main {
     min-height: 100%;
     background-image: url('/images/alyn-spiller-song-of-squall.jpg');
     background-size: cover;
+    background-position: center;
     section {
         height: 100vh;
     }
 }
 .first-screen {
     .max-width {
-        h2 {
+        width: 100%;
+        max-width: 1150px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        nav {
+            width: 50%;
+            margin-left: auto;
+            ul {
+                // min-height: 50px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                li {
+                    display: inline;
+                    padding: 15px 30px;
+                    a {
+                        text-decoration: none;
+                        color: $color-yellow;
+                        font-size: $size-4;
+                    }
+                }
+            }
+        }
+        h1 {
             font-size: $size-1;
+            color: $color-yellow;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: bold;
+            width: 30%;
+            align-self: center;
+            margin: auto;
+            line-height: 180px;
         }
     }
 }
