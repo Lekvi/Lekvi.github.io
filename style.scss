@@ -5,6 +5,14 @@
 
 $size-1: 36px;
 
+main {
+    min-height: 100%;
+    background-image: url('/images/alyn-spiller-song-of-squall.jpg');
+    background-size: cover;
+    section {
+        height: 100vh;
+    }
+}
 .first-screen {
     .max-width {
         h2 {

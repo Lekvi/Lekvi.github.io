@@ -3,6 +3,16 @@
   margin: 0;
 }
 
+main {
+  min-height: 100%;
+  background-image: url("/images/alyn-spiller-song-of-squall.jpg");
+  background-size: cover;
+}
+
+main section {
+  height: 100vh;
+}
+
 .first-screen .max-width h2 {
   font-size: 36px;
 }
