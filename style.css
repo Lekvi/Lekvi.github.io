@@ -6,7 +6,7 @@
 
 main {
   min-height: 100%;
-  background-image: url("/images/alyn-spiller-song-of-squall.jpg");
+  background-image: url("/images/main-bg.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -15,10 +15,13 @@ main section {
   height: 100vh;
 }
 
-.first-screen .max-width {
+.max-width {
   width: 100%;
   max-width: 1150px;
   margin: auto;
+}
+
+.first-screen .max-width {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31,7 +34,7 @@ main section {
 
 .first-screen .max-width nav {
   width: 50%;
-  margin-left: auto;
+  margin: 0 auto;
 }
 
 .first-screen .max-width nav ul {
@@ -59,6 +62,24 @@ main section {
   text-decoration: none;
   color: #FFB100;
   font-size: 28px;
+  font-weight: 600;
+}
+
+.first-screen .max-width nav ul li a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #FFB100;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.first-screen .max-width nav ul li a:hover::after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .first-screen .max-width h1 {
@@ -67,11 +88,70 @@ main section {
   text-transform: uppercase;
   text-align: center;
   font-weight: bold;
-  width: 30%;
+  width: 50%;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
   margin: auto;
   line-height: 180px;
+}
+
+.second-screen .max-width {
+  padding: 50px 0;
+  max-width: 1950px;
+}
+
+.second-screen .left-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.second-screen article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  max-width: 1150px;
+  margin: auto;
+}
+
+.second-screen article img {
+  width: 30%;
+  margin-bottom: 50px;
+}
+
+.second-screen article p {
+  color: #FFB100;
+  font-size: 36px;
+  width: 80%;
+  font-weight: 900;
+  text-shadow: black 1px 1px 0, black -1px -1px 0, black -1px 1px 0, black 1px -1px 0;
+}
+
+@media screen and (max-width: 900px) {
+  h1 {
+    font-size: 100px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
