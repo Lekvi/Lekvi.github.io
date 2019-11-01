@@ -1,7 +1,7 @@
 * {
-    padding: 0;
-    margin: 0;
-    font-family: 'Grenze', serif;
+  padding: 0;
+  margin: 0;
+  font-family: "Grenze", serif;
 }
 
 $size-1: 200px;
@@ -9,128 +9,123 @@ $size-2: 48px;
 $size-3: 36px;
 $size-4: 28px;
 
-$color-yellow:#FFB100;
+$color-yellow: #ffb100;
 
 main {
-    min-height: 100%;
-    background-image: url('/images/main-bg.jpg');
-    background-size: cover;
-    background-position: center;
+  min-height: 100%;
+  background-image: url("/images/main-bg.jpg");
+  background-size: cover;
+  background-position: center;
 
-    section {
-        height: 100vh;
-    }
+  section {
+    height: 100vh;
+  }
 }
 
 .max-width {
-    width: 100%;
-    max-width: 1150px;
-    margin: auto;
+  width: 100%;
+  max-width: 1150px;
+  margin: auto;
 }
 
 .first-screen {
-    .max-width {
+  .max-width {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 
+    nav {
+      width: 50%;
+      margin: 0 auto;
+
+      ul {
         display: flex;
-        flex-direction: column;
-        height: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
 
-        nav {
-            width: 50%;
-            margin: 0 auto;
+        li {
+          display: inline;
+          padding: 15px 30px;
 
-            ul {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-
-                li {
-                    display: inline;
-                    padding: 15px 30px;
-
-                    a {
-                        text-decoration: none;
-                        color: $color-yellow;
-                        font-size: $size-4;
-                        font-weight: 600;
-
-                        &::after {
-                            content: "";
-                            display: block;
-                            width: 100%;
-                            height: 3px;
-                            background-color: $color-yellow;
-                            transform: scale(0);
-                            transition: all .3s;
-                        }
-                    }
-
-                    a:hover::after {
-                        transform: scale(1);
-                    }
-                }
-            }
-        }
-
-        h1 {
-            font-size: $size-1;
+          a {
+            text-decoration: none;
             color: $color-yellow;
-            text-transform: uppercase;
-            text-align: center;
-            font-weight: bold;
-            width: 50%;
-            align-self: center;
-            margin: auto;
-            line-height: 180px;
+            font-size: $size-4;
+            font-weight: 600;
+
+            &::after {
+              content: "";
+              display: block;
+              width: 100%;
+              height: 3px;
+              background-color: $color-yellow;
+              transform: scale(0);
+              transition: all 0.3s;
+            }
+          }
+
+          a:hover::after {
+            transform: scale(1);
+          }
         }
+      }
     }
+
+    h1 {
+      font-size: $size-1;
+      color: $color-yellow;
+      text-transform: uppercase;
+      text-align: center;
+      font-weight: bold;
+      width: 50%;
+      align-self: center;
+      margin: auto;
+      line-height: 180px;
+    }
+  }
 }
 
 .second-screen {
-    .max-width {
-        padding: 50px 0;
-        max-width: 1950px;
-    }
-    .left-column {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-    }
-    article {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        max-width: 1150px;
-        margin: auto;
+  .max-width {
+    padding: 50px 0;
+    max-width: 1950px;
+  }
+  .left-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1150px;
+    margin: auto;
 
-        img {
-            width: 30%;
-            margin-bottom: 50px;
-        }
-
-        p {
-            color: $color-yellow;
-            font-size: $size-3;
-            width: 80%;
-            font-weight: 900;
-            text-shadow: black 1px 1px 0, black -1px -1px 0,
-                black -1px 1px 0, black 1px -1px 0;
-        }
+    img {
+      width: 30%;
+      margin-bottom: 50px;
     }
 
+    p {
+      color: $color-yellow;
+      font-size: $size-3;
+      width: 80%;
+      font-weight: 900;
+      text-shadow: black 1px 1px 0, black -1px -1px 0, black -1px 1px 0,
+        black 1px -1px 0;
+    }
+  }
 }
 
+@media screen and (max-width: 900px) {
+  $size-1: 100px;
 
-
-
-@media screen and (max-width:900px) {
-    $size-1: 100px;
-
-    h1 {
-        font-size: $size-1;
-    }
+  h1 {
+    font-size: $size-1;
+  }
 }
